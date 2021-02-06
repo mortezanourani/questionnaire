@@ -1,0 +1,9 @@
+﻿@using Questionnaire.Models;
+
+<section class="results">
+    @foreach (MySqlModel.Answer A in (List<MySqlModel.Answer>)ViewData["Results"])
+    {
+        string Province = (string.IsNullOrEmpty(A.province)) ? "نامشخص" : A.province;
+        <header>@Province [@A.count]</header>
+    }
+</section>

@@ -1,0 +1,363 @@
+﻿
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 200;
+    src: url('../Fonts/eot/UltraLight.eot');
+    src: url('../Fonts/eot/UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../Fonts/woff2/UltraLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../Fonts/woff/UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../Fonts/ttf/UltraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../Fonts/eot/Light.eot');
+    src: url('../Fonts/eot/Light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../Fonts/woff2/Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../Fonts/woff/Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../Fonts/ttf/Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../Fonts/eot/Normal.eot');
+    src: url('../Fonts/eot/Normal.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../Fonts/woff2/Normal.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../Fonts/woff/Normal.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../Fonts/ttf/Normal.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../Fonts/eot/Medium.eot');
+    src: url('../Fonts/eot/Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../Fonts/woff2/Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../Fonts/woff/Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../Fonts/ttf/Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../Fonts/eot/Bold.eot');
+    src: url('../Fonts/eot/Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../Fonts/woff2/Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../Fonts/woff/Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../Fonts/ttf/Bold.ttf') format('truetype');
+}
+
+html {
+    direction: rtl;
+    padding: 0px;
+    margin: 0px;
+    background-color: #f7f7f7;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    direction: rtl;
+    max-width: 882px;
+    width: 882px;
+    font-size: 11pt;
+    font-weight: 300;
+    font-family: IRANSans;
+}
+
+    body * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+#promoteDialog {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: #4390bc55;
+    display: none;
+}
+
+    #promoteDialog .container {
+        left: 50%;
+        width: 350px;
+        padding: 50px;
+        margin: 0px -175px;
+        background-color: #fff;
+        border-radius: 0;
+        position: fixed;
+    }
+
+        #promoteDialog .container button {
+            width: 120px;
+            outline: none;
+            padding: 7px 10px;
+            margin: 10px 0 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            font-family: IRANSans;
+            font-weight: 300;
+            font-size: 11pt;
+        }
+
+            #promoteDialog .container button.cancel {
+                float: right;
+            }
+
+                #promoteDialog .container button.cancel:hover {
+                    border-color: #ddd;
+                    background-color: #ddd;
+                }
+
+            #promoteDialog .container button.accept {
+                background-color: #4390bc;
+                border-color: #4390bc;
+                float: left;
+                color: #fff;
+            }
+
+                input[type=submit]:hover,
+                #promoteDialog .container button.accept:hover {
+                    background-color: #5fb7ff;
+                    border-color: #5fb7ff;
+                }
+
+header {
+    display: block;
+    margin: auto -50px;
+    padding: 15px 55px;
+    margin-bottom: 35px;
+    font-size: 12pt;
+    font-weight: normal;
+    color: #fff;
+    background: #4390bc;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.75em;
+    text-align: justify;
+    text-align-last: right;
+    color: #111;
+}
+
+label {
+    display: block;
+    font-size: 11pt;
+    margin: 0 5px 10px;
+}
+
+input {
+    outline: none;
+}
+
+    input[type='radio'],
+    input[type='checkbox'] {
+        display: none;
+    }
+
+    input[type=text],
+    input[type=submit],
+    input[type=text]:focus,
+    input[type=radio] + label,
+    input[type=checkbox] + label {
+        padding: 10px 20px;
+        margin: 0 5px 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        font-family: IRANSans;
+        font-weight: 300;
+        font-size: 11pt;
+    }
+
+    input[type=radio]:hover + label,
+    input[type=checkbox]:hover + label {
+        border-color: #b2d3e6;
+        background-color: #b2d3e6;
+    }
+
+    input[type=radio]:checked + label,
+    input[type=checkbox]:checked + label {
+        color: #000;
+        border-color: #d8e9f3;
+        background-color: #d8e9f3;
+    }
+
+    input[type=submit] {
+        background-color: #4390bc;
+        border-color: #4390bc;
+        color: #fff;
+        width: 100%;
+        margin: 0;
+    }
+
+
+
+body .body-content {
+    margin: 0;
+    padding: 0px;
+}
+
+    body .body-content section.pragraph {
+        font-weight: normal;
+        font-size: 12pt;
+        padding: 50px;
+        margin-bottom: 25px;
+        background-color: #4390bc;
+    }
+
+        body .body-content section.pragraph p {
+            font-weight: normal;
+            font-size: 12pt;
+            color: #fff !important;
+            margin: auto 5px;
+        }
+
+    body .body-content section.form {
+        margin: 0px;
+        padding: 0px;
+    }
+
+        body .body-content section.form .form-group {
+            font-size: 0;
+            padding: 0px 50px 25px;
+            margin-bottom: 25px;
+            background-color: #fff;
+            border: 1px solid #4390bc;
+        }
+
+            body .body-content section.form .form-group .question {
+                padding: 10px 20px;
+                margin: 0 5px 10px;
+                border: 1px solid #ddd;
+                background-color: #ddd;
+                display: inline-block;
+            }
+
+.unanswered {
+    border-color: #f44336 !important;
+}
+
+    .unanswered header {
+        background-color: #f44336;
+    }
+
+@media screen and (min-width: 800px) {
+    .full {
+        width: 770px;
+    }
+
+    .full-third {
+        width: 510px;
+    }
+
+    .half {
+        width: 380px;
+    }
+
+    .third {
+        width: 250px;
+    }
+
+    .quarter {
+        width: 185px;
+    }
+
+    .fifth {
+        width: 146px;
+    }
+
+    .sixth {
+        width: 120px;
+    }
+
+    .seventh {
+        width: 101.42857px;
+    }
+
+    .eighth {
+        width: 87.5px;
+    }
+
+    .ninth {
+        width: 76.66666px;
+    }
+
+    .tenth {
+        width: 68px;
+    }
+}
+
+footer {
+    background-color: #fff;
+    border: 1px solid #4390bc;
+    margin-top: 25px;
+    padding: 35px 55px;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        max-width: 100%;
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+        body .body-content section.pragraph {
+            padding: 50px 25px 25px;
+        }
+
+            body .body-content section.pragraph p {
+                margin: 0px;
+            }
+
+        body .body-content section.form .form-group {
+            padding: 0px 25px 15px;
+        }
+
+        body .body-content section.form .form-group header {
+            margin: 0 -25px 25px;
+            padding: 15px 25px;
+        } 
+
+    .full,
+    .full-third,
+    .half,
+    .third,
+    .quarter,
+    .fifth,
+    .sixth,
+    .seventh,
+    .eighth,
+    .ninth,
+    .tenth,
+    .question {
+        width: 100%;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    .newssources-group input {
+        margin-bottom: 35px;
+    }
+
+        .newssources-group input:last-child {
+            margin-bottom: 10px;
+        }
+}

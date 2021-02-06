@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پرسشنامه شناخت پیامدهای روان‌شناختی ویروس کرونا | دانشگاه گیلان</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+        </div>
+    </div>
+    <div class="container body-content">
+        <div id="promoteDialog">
+            <div class="container">
+                <p>شما به یک یا چند پرسش پاسخ نداده اید.</p>
+                <p>آیا پاسخ هایتان مورد تایید است؟</p>
+                <button class="cancel">بازنگری</button>
+                <button class="accept">تایید</button>
+            </div>
+        </div>
+
+        @RenderBody()
+
+        <footer>
+            <p>&copy; تمامی حقوق معنوی این پژوهش برای دانشجویان دکتری گروه روانشناسی دانشگاه گیلان محفوظ است</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

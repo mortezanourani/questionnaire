@@ -1,0 +1,36 @@
+﻿@using Questionnaire.Models;
+
+<section class="pragraph">
+    <p>همواره برخی عوامل ناشناخته همچون بیماری‌ها یا وقایع گوناگون که خصوصاً ایمنی و سلامتی انسان را نشانه می‌گیرند، باعث اضطراب در ما می‌شوند. بیماری کرونا (کووید-19) نیز از زمان شناسایی در جهان منجر به ترس و اضطراب ناشی از ابتلا به ویروس و پیامد های آن شده است.</p>
+    <p>خواهشمندیم با بررسی عبارات زیر مشخص نمایید هر عبارت چقدر به درستی می تواند شرایط شما را در ارتباط با کرونا توصیف کند.</p>
+    <p>لازم به ذکر است هیچ پاسخ درست یا نادرستی وجود ندارد، لطفاً به تمام سؤالات پاسخ دهید.</p>
+</section>
+
+<section class="form">
+    <form class="frm-questions" method="post" role="form">
+        @foreach (MySqlModel.Question Q in (List<MySqlModel.Question>)ViewData["Questions"])
+        {
+            string qName = string.Format("covid{0}", Q.id);
+            string v1 = string.Format("{0}v1", qName);
+            string v2 = string.Format("{0}v2", qName);
+            string v3 = string.Format("{0}v3", qName);
+            string v4 = string.Format("{0}v4", qName);
+            <div class="form-group">
+                <header>@Q.question</header>
+
+                <input type="radio" name="@qName" id="@v1" value="1" />
+                <label for="@v1" class="quarter">هرگز</label>
+
+                <input type="radio" name="@qName" id="@v2" value="2" />
+                <label for="@v2" class="quarter">گاهی اوقات</label>
+
+                <input type="radio" name="@qName" id="@v3" value="3" />
+                <label for="@v3" class="quarter">بیشتر اوقات</label>
+
+                <input type="radio" name="@qName" id="@v4" value="4" />
+                <label for="@v4" class="quarter">همیشه</label>
+            </div>
+        }
+        <input type="submit" value="صفحه بعد" />
+    </form>
+</section>
